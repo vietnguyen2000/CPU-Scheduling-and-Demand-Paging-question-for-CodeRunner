@@ -1,0 +1,1780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Default for Hệ điều hành</text>
+    </category>
+    <info format="moodle_auto_format">
+      <text>The default category for questions shared in context 'Hệ điều hành'.</text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 26  -->
+  <question type="coderunner">
+    <name>
+      <text>FIFO page replacement</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p dir="ltr" style="text-align: left;"><p dir="ltr">Viết function findNumOfPageReplacement để in ra màn hình số lần thay trang, với giá trị truyền vào là dãy những trang tham chiếu và số frames</p><pre><div><div>def&nbsp;findNumOfPageReplacement(pageReference,&nbsp;numOfFrames):</div></div>    pass</pre><p dir="ltr">Để đúng với kết quả, in đúng theo kết quả testcase dưới đây, chỉ in đúng số trang được thay thế.</p><p dir="ltr"><br>
+
+</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>python3</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <showsource>0</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload>def findNumOfPageReplacement(pageReference, numOfFrames):
+    pass</answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer>def findNumOfPageReplacement(pageReference, numOfFrames):
+    frames = [-1]*numOfFrames
+    currentIndex = 0
+    numOfPageReplacement = 0
+    for page in pageReference:
+        if page not in frames:
+            frames[currentIndex%numOfFrames] = page
+            numOfPageReplacement +=1
+            currentIndex +=1
+
+    print(numOfPageReplacement)</answer>
+    <validateonsave>1</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <testcases>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([7,0,1,2,0,3,0,4,2,3,0,3,0,3,2,1,2,0,1,7,0,1],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>15
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>16
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1],4)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>12
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,1,2,1,2,2,6,9,1,2,2,6,9,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>24
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,1,2,1,2,2,9,1,1,3,3,5,6,7,1,2,5,4,6,2,1,12,3,5,4,6,9,4,2,4,5,9,5,7,8,9,8,7,2,1,3,2,4,5,6,5,4,2,5,6,8,2,2,2,6,9,1,1,2,1,2,2,9,1,2,2,6,9,1,2,10,2,6,1,2,2,6,6,9,1,2,2,6,9,1,2,10,2,6,1,2,6,9,1,2,2,6,9,1,2,10,1,5,1,2,3,5,4,5,6,8,5,2,4,5,9,8,4,1,5,2,2,9,1,2,2,6,2,4,6,1,2,3,12,3,11,2,4,2,5,6,9,1,1,2,1,2,2,9,1,2,2,6,9,1,2,10,2,6,1,2,2,6,6,9,1,2,2,6,9,1,2,10,2,6,1,2,6,9,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1,2,6,1,2,1,6,9,5,1],5)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>58
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+<!-- question: 28  -->
+  <question type="coderunner">
+    <name>
+      <text>LRU page replacement</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p dir="ltr" style="text-align: left;"><p dir="ltr">Viết function findNumOfPageReplacement để in ra màn hình số lần thay trang, với giá trị truyền vào là dãy những trang tham chiếu và số frames với giải thuật LRU</p><pre><div><div>def&nbsp;findNumOfPageReplacement(pageReference,&nbsp;numOfFrames):</div></div>    pass</pre><p dir="ltr">Để đúng với kết quả, in đúng theo kết quả testcase dưới đây, chỉ in đúng số trang được thay thế.</p><p dir="ltr"><br></p><br><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>python3</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <showsource>0</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload>def findNumOfPageReplacement(pageReference, numOfFrames):
+    pass</answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[def findNumOfPageReplacement(pageReference, numOfFrames):
+    frames = [-1]*numOfFrames
+    numOfPageReplacement = 0
+    for i in range(len(pageReference)):
+        if pageReference[i] not in frames:
+            index = 0
+            maxLength = -99999
+            for j in range(numOfFrames):
+                if frames[j] not in pageReference[:i]:
+                    index = j
+                    break
+                if pageReference[:i][::-1].index(frames[j]) > maxLength:
+                    maxLength = pageReference[:i][::-1].index(frames[j])
+                    index = j
+            frames[index] = pageReference[i]
+            numOfPageReplacement += 1
+    print(numOfPageReplacement)]]></answer>
+    <validateonsave>1</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <testcases>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([7,0,1,2,0,3,0,4,2,3,0,3,0,3,2,1,2,0,1,7,0,1],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>12
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>15
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1],4)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>10
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,1,2,1,2,2,6,9,1,2,2,6,9,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>23
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,1,2,1,2,2,9,1,1,3,3,5,6,7,1,2,5,4,6,2,1,12,3,5,4,6,9,4,2,4,5,9,5,7,8,9,8,7,2,1,3,2,4,5,6,5,4,2,5,6,8,2,2,2,6,9,1,1,2,1,2,2,9,1,2,2,6,9,1,2,10,2,6,1,2,2,6,6,9,1,2,2,6,9,1,2,10,2,6,1,2,6,9,1,2,2,6,9,1,2,10,1,5,1,2,3,5,4,5,6,8,5,2,4,5,9,8,4,1,5,2,2,9,1,2,2,6,2,4,6,1,2,3,12,3,11,2,4,2,5,6,9,1,1,2,1,2,2,9,1,2,2,6,9,1,2,10,2,6,1,2,2,6,6,9,1,2,2,6,9,1,2,10,2,6,1,2,6,9,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1,2,6,1,2,1,6,9,5,1],5)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>53
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+<!-- question: 27  -->
+  <question type="coderunner">
+    <name>
+      <text>Optimal page replacement</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p dir="ltr" style="text-align: left;"><p dir="ltr"></p><p dir="ltr">Viết function findNumOfPageReplacement để in ra màn hình số lần thay trang, với giá trị truyền vào là dãy những trang tham chiếu và số frames với giải thuật Optimal</p><pre><div><div>def&nbsp;findNumOfPageReplacement(pageReference,&nbsp;numOfFrames):</div></div>    pass</pre><p dir="ltr">Để đúng với kết quả, in đúng theo kết quả testcase dưới đây, chỉ in đúng số trang được thay thế.</p><p dir="ltr"><br></p><br><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p dir="ltr" style="text-align: left;"><div><div>def&nbsp;findNumOfPageReplacement(pageReference,&nbsp;numOfFrames):</div><div>&nbsp;&nbsp;&nbsp;&nbsp;frames&nbsp;=&nbsp;[-1]*numOfFrames</div><div>&nbsp;&nbsp;&nbsp;&nbsp;numOfPageReplacement&nbsp;=&nbsp;0</div><div>&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;i&nbsp;in&nbsp;range(len(pageReference)):</div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;pageReference[i]&nbsp;not&nbsp;in&nbsp;frames:</div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index&nbsp;=&nbsp;0</div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxLength&nbsp;=&nbsp;-99999</div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;j&nbsp;in&nbsp;range(numOfFrames):</div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;frames[j]&nbsp;not&nbsp;in&nbsp;pageReference[i+1:]:</div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index&nbsp;=&nbsp;j</div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;pageReference[i+1:].index(frames[j])&nbsp;&gt;&nbsp;maxLength:</div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxLength&nbsp;=&nbsp;pageReference[i+1:].index(frames[j])</div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index&nbsp;=&nbsp;j</div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frames[index]&nbsp;=&nbsp;pageReference[i]</div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numOfPageReplacement&nbsp;+=&nbsp;1</div><div>&nbsp;&nbsp;&nbsp;&nbsp;print(numOfPageReplacement)</div></div><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>python3</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <showsource>0</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload>def findNumOfPageReplacement(pageReference, numOfFrames):
+    pass</answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[def findNumOfPageReplacement(pageReference, numOfFrames):
+    frames = [-1]*numOfFrames
+    numOfPageReplacement = 0
+    for i in range(len(pageReference)):
+        if pageReference[i] not in frames:
+            index = 0
+            maxLength = -99999
+            for j in range(numOfFrames):
+                if frames[j] not in pageReference[i+1:]:
+                    index = j
+                    break
+                if pageReference[i+1:].index(frames[j]) > maxLength:
+                    maxLength = pageReference[i+1:].index(frames[j])
+                    index = j
+            frames[index] = pageReference[i]
+            numOfPageReplacement += 1
+    print(numOfPageReplacement)]]></answer>
+    <validateonsave>1</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <testcases>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([7,0,1,2,0,3,0,4,2,3,0,3,0,3,2,1,2,0,1,7,0,1],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>9
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>10
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1],4)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>8
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,1,2,1,2,2,6,9,1,2,2,6,9,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>13
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,1,2,1,2,2,9,1,1,3,3,5,6,7,1,2,5,4,6,2,1,12,3,5,4,6,9,4,2,4,5,9,5,7,8,9,8,7,2,1,3,2,4,5,6,5,4,2,5,6,8,2,2,2,6,9,1,1,2,1,2,2,9,1,2,2,6,9,1,2,10,2,6,1,2,2,6,6,9,1,2,2,6,9,1,2,10,2,6,1,2,6,9,1,2,2,6,9,1,2,10,1,5,1,2,3,5,4,5,6,8,5,2,4,5,9,8,4,1,5,2,2,9,1,2,2,6,2,4,6,1,2,3,12,3,11,2,4,2,5,6,9,1,1,2,1,2,2,9,1,2,2,6,9,1,2,10,2,6,1,2,2,6,6,9,1,2,2,6,9,1,2,10,2,6,1,2,6,9,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1,2,6,1,2,1,6,9,5,1],5)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>35
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+<!-- question: 21  -->
+  <question type="coderunner">
+    <name>
+      <text>Programing for FCFS CPU Scheduling</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p dir="ltr" style="text-align: left;">Viết function findavgTime để xuất ra thời gian đợi trung bình và thời gian xoay vòng trung bình của giải thuật FCFS CPU Scheduling theo template như sau:</p>
+<pre>def findavgTime(processes): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of FCFS Algorithm
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) 
+</pre>
+<p dir="ltr" style="text-align: left;">Để đúng với kết quả, in đúng theo kết quả testcase dưới đây, lấy 2 chữ số 0 sau chữ số thập phân (như code mẫu đã sinh ra).</p>
+<p dir="ltr" style="text-align: left;"><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>python3</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <showsource>0</showsource>
+    <answerboxlines>30</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload><![CDATA[def findavgTime(processes): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of FCFS Algorithm
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) ]]></answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[def findavgTime(processes): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of FCFS Algorithm
+    n = len(processes)
+    wt = [0] * n 
+    tat = [0] * n  
+    completeTime = [0]*n
+
+    # Function to find turn around time
+    for i in range(n):
+        completeTime[i] = max(completeTime[i-1],processes[i][0]) + processes[i][1] if i>0 else processes[i][0] + processes[i][1]
+        tat[i] = completeTime[i] - processes[i][0] # turn around time = completeTime - arrival time
+
+    # finding waiting time
+    for i in range(n):
+        wt[i] = tat[i] - processes[i][1]
+  
+    
+    
+    avgWaitingTime = sum(wt) / n
+    avgTurnAroundTime = sum(tat) / n
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) ]]></answer>
+    <validateonsave>1</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <testcases>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,10),(0,5),(0,8)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 8.33
+Average turn around time = 16.00</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,7),(0,2),(0,5),(0,8),(0,2),(0,1)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 12.67
+Average turn around time = 16.83
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,5),(0,2),(0,6),(0,2),(0,1),(0,7)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 9.33
+Average turn around time = 13.17
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,4),(2,6),(0,2),(5,12),(7,32),(7,5),(8,7),(10,16),(12,24),(20,27)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 35.60
+Average turn around time = 49.10
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,4),(1,6),(5,2),(8,12),(13,32),(16,4),(20,6),(22,12),(23,32),(25,5),(26,7),(27,16),(27,2),(27,12),(29,32),(30,5),(31,7),(33,16),(33,24),(33,27)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 83.75
+Average turn around time = 96.90
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,4),(1,6),(1,2),(1,12),(1,32),(10,4),(10,2),(10,3),(10,12),(15,24),(15,51),(16,6),(17,12),(20,32),(20,5),(20,7),(20,5),(20,12),(20,22),(30,16),(30,17),(30,22),(30,16),(30,22),(30,16),(30,17),(35,17),(40,22),(40,16),(40,8),(45,1),(45,16),(45,2),(45,12),(47,32),(47,5),(47,7),(47,16),(47,24),(47,27)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 241.12
+Average turn around time = 255.72
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+<!-- question: 24  -->
+  <question type="coderunner">
+    <name>
+      <text>Programing for LRTF CPU Scheduling</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p dir="ltr" style="text-align: left;"></p><p dir="ltr">Viết function findavgTime để xuất ra thời gian đợi trung bình và thời gian xoay vòng trung bình của giải thuật LRTF CPU Scheduling theo template như sau:</p><pre>def findavgTime(processes): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of LRTF Algorithm
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) 
+</pre><p dir="ltr">Hàm findavgTime được truyền vào là một list của các tuple 2 phần tử, phần tử thứ nhất sẽ là arrival time của process, phần tử thứ hai sẽ là brust time của process.</p><p dir="ltr">Để đúng với kết quả, in đúng theo kết quả testcase dưới đây, lấy 2 chữ số 0 sau chữ số thập phân (như code mẫu đã sinh ra).</p><p dir="ltr"><br></p><br><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p dir="ltr" style="text-align: left;"></p><div><div><br></div></div><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>python3</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <showsource>0</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload></answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[class Process:
+    def __init__(self, arrivalTime, brustTime) -> None:
+        self.arrivalTime = arrivalTime
+        self.brustTime = brustTime
+        self.remainingTime = brustTime
+        self.waitingTime = 0
+        self.turnAroundTime = 0
+        self.completeTime = -1
+
+def findavgTime(processes): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of LRTF Algorithm
+    n = len(processes)
+    lstProcess = []
+    # Tạo các process 
+    for process in processes:
+        lstProcess.append(Process(process[0], process[1]))
+
+    # set các thông số cần thiết
+    countProcessComplete = 0
+    runTime = 0
+    #Chạy đến khi nào tất cả các process đều đã hoàn thành
+    #Lặp qua từng thời điểm
+    while(countProcessComplete < n):
+        index = -1
+        longestJob = -99999
+        #Tìm process chưa được thực hiện và có remaining time nhỏ nhất 
+        for i in range(n):
+            if lstProcess[i].arrivalTime <= runTime and lstProcess[i].completeTime == -1:
+                if lstProcess[i].remainingTime > longestJob:
+                    #tìm được process thõa mãn
+                    longestJob = lstProcess[i].remainingTime
+                    index = i
+
+        runTime += 1
+        #nếu không tìm được process thõa mãn thì skip 
+        if index == -1:
+            continue
+        #Cập nhật các thông số cho process thõa mãn 
+        lstProcess[index].remainingTime -= 1
+        if lstProcess[index].remainingTime == 0: #process hoàn thành
+            lstProcess[index].completeTime = runTime
+            lstProcess[index].turnAroundTime = runTime - lstProcess[index].arrivalTime
+            lstProcess[index].waitingTime = lstProcess[index].turnAroundTime - lstProcess[index].brustTime
+            countProcessComplete +=1
+    
+    avgWaitingTime = sum([process.waitingTime for process in lstProcess])/n
+    avgTurnAroundTime = sum([process.turnAroundTime for process in lstProcess])/n
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) 
+
+]]></answer>
+    <validateonsave>1</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <testcases>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,2),(0,3),(2,2),(3,5),(4,4)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 9.00
+Average turn around time = 12.20
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(2,3),(0,4),(4,2),(5,4)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 5.50
+Average turn around time = 8.75
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(3,3),(0,4),(4,2),(5,4),(1,2),(4,5),(2,1),(2,5),(4,5)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 20.78
+Average turn around time = 24.22
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,5),(2,5),(2,1),(3,5),(3,2),(5,1),(6,2),(8,2)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 13.00
+Average turn around time = 15.88
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,2),(2,6),(3,5),(3,2),(5,1),(6,1),(6,2),(7,2),(7,3),(6,2),(7,5),(4,3),(5,6),(10,1)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 24.64
+Average turn around time = 27.57
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+<!-- question: 25  -->
+  <question type="coderunner">
+    <name>
+      <text>Programing for RoundRobin CPU Scheduling</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p dir="ltr" style="text-align: left;"></p><p dir="ltr">Viết function findavgTime để xuất ra thời gian đợi trung bình và thời gian xoay vòng trung bình của giải thuật RoundRobin CPU Scheduling theo template như sau:</p><pre>def findavgTime(processes, quantumTime): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of RoundRobin Algorithm
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) 
+</pre><p dir="ltr">Hàm findavgTime được truyền vào là một list của các tuple 2 phần tử, phần tử thứ nhất sẽ là arrival time của process, phần tử thứ hai sẽ là brust time của process và quantumTime là số nguyên.</p><p dir="ltr">Để đúng với kết quả, in đúng theo kết quả testcase dưới đây, lấy 2 chữ số 0 sau chữ số thập phân (như code mẫu đã sinh ra).</p><p dir="ltr"><br></p><br><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>python3</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <showsource>0</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload><![CDATA[def findavgTime(processes, quantumTime): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of RoundRobin Algorithm
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) 
+]]></answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[class Process:
+    def __init__(self, arrivalTime, brustTime) -> None:
+        self.arrivalTime = arrivalTime
+        self.brustTime = brustTime
+        self.remainingTime = brustTime
+        self.waitingTime = 0
+        self.turnAroundTime = 0
+        self.completeTime = -1
+
+def findavgTime(processes, quantumTime): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of RoundRobin Algorithm
+    n = len(processes)
+    lstProcess = []
+    # Tạo các process 
+    for process in processes:
+        lstProcess.append(Process(process[0], process[1]))
+
+    # set các thông số cần thiết
+    countProcessComplete = 0
+    runTime = 0
+    index = 0
+    quantumCount = 0
+    #Chạy đến khi nào tất cả các process đều đã hoàn thành
+    #Lặp qua từng thời điểm
+    while(countProcessComplete < n):
+        if quantumCount == 0:
+            #Tìm process chưa được thực hiện và có remaining time nhỏ nhất 
+            for i in range(index, index + n):
+                if lstProcess[i%n].arrivalTime <= runTime and lstProcess[i%n].completeTime == -1:
+                    #tìm được process thõa mãn
+                    index = i%n
+            quantumCount = quantumTime
+        runTime += 1
+
+        quantumCount -= 1
+        #Cập nhật các thông số cho process thõa mãn 
+        lstProcess[index].remainingTime -= 1
+        if lstProcess[index].remainingTime == 0: #process hoàn thành
+            lstProcess[index].completeTime = runTime
+            lstProcess[index].turnAroundTime = runTime - lstProcess[index].arrivalTime
+            lstProcess[index].waitingTime = lstProcess[index].turnAroundTime - lstProcess[index].brustTime
+            countProcessComplete +=1
+    avgWaitingTime = sum([process.waitingTime for process in lstProcess])/n
+    avgTurnAroundTime = sum([process.turnAroundTime for process in lstProcess])/n
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) ]]></answer>
+    <validateonsave>1</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <testcases>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,3),(0,4),(0,3)],1)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 5.33
+Average turn around time = 8.67
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,10),(0,5),(0,8)],2)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 12.00
+Average turn around time = 19.67
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(1,6),(1,8),(2,7),(3,3)],2)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 12.75
+Average turn around time = 18.75
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,5),(2,5),(2,1),(3,5),(3,2),(5,1),(6,2),(8,2)],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 13.62
+Average turn around time = 16.50
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,2),(2,6),(3,5),(3,2),(5,1),(6,1),(6,2),(7,2),(7,3),(6,2),(7,5),(4,3),(5,6),(10,1)],4)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 27.21
+Average turn around time = 30.14
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+<!-- question: 22  -->
+  <question type="coderunner">
+    <name>
+      <text>Programing for SJF CPU Scheduling (Non-preemptive)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p dir="ltr" style="text-align: left;"></p><p dir="ltr">Viết function findavgTime để xuất ra thời gian đợi trung bình và thời gian xoay vòng trung bình của giải thuật SJF CPU Scheduling&nbsp;(Non-preemptive) theo template như sau:</p><pre>def findavgTime(processes): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of SJF Algorithm (Non-preemptive)
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) 
+</pre><p dir="ltr">Hàm findavgTime được truyền vào là một list của các tuple 2 phần tử, phần tử thứ nhất sẽ là arrival time của process, phần tử thứ hai sẽ là brust time của process.</p><p dir="ltr">Để đúng với kết quả, in đúng theo kết quả testcase dưới đây, lấy 2 chữ số 0 sau chữ số thập phân (như code mẫu đã sinh ra).</p><p dir="ltr"><br>
+
+</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>python3</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <showsource>0</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload><![CDATA[def findavgTime(processes): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of SJF Algorithm (Non-preemptive)
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) ]]></answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[class Process:
+    def __init__(self, arrivalTime, brustTime) -> None:
+        self.arrivalTime = arrivalTime
+        self.brustTime = brustTime
+        self.remainingTime = brustTime
+        self.waitingTime = 0
+        self.turnAroundTime = 0
+        self.completeTime = -1
+
+def findavgTime(processes): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of SJF Algorithm (Non-preemptive)
+    n = len(processes)
+    lstProcess = []
+    # Tạo các process 
+    for process in processes:
+        lstProcess.append(Process(process[0], process[1]))
+
+    # set các thông số cần thiết
+    countProcessComplete = 0
+    runTime = 0
+    #Chạy đến khi nào tất cả các process đều đã hoàn thành
+    while(countProcessComplete < n):
+        index = 0
+        shortestJob = 99999
+        #Tìm process chưa được thực hiện và có burst time nhỏ nhất 
+        #Ở trường hợp này burst time cũng là remaining time, vì giải thuật không nhường
+        for i in range(n):
+            if lstProcess[i].arrivalTime <= runTime and lstProcess[i].completeTime == -1:
+                if lstProcess[i].remainingTime < shortestJob:
+                    #tìm được process thõa mãn
+                    shortestJob = lstProcess[i].remainingTime
+                    index = i
+        #Cập nhật các thông số cho process thõa mãn 
+        lstProcess[index].waitingTime = runTime - lstProcess[index].arrivalTime
+        runTime += lstProcess[index].remainingTime
+        lstProcess[index].completeTime = runTime
+        lstProcess[index].turnAroundTime = lstProcess[index].waitingTime + lstProcess[index].brustTime
+        
+        countProcessComplete +=1
+    
+    avgWaitingTime = sum([process.waitingTime for process in lstProcess])/n
+    avgTurnAroundTime = sum([process.turnAroundTime for process in lstProcess])/n
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) 
+]]></answer>
+    <validateonsave>1</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <testcases>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(2,3),(0,4),(4,2),(5,4)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 2.00
+Average turn around time = 5.25</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(3,3),(0,4),(4,2),(5,4),(1,2),(4,5),(2,1),(2,5),(4,5)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 8.33
+Average turn around time = 11.78
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(3,3),(0,4),(4,2),(5,4),(1,2),(4,5),(2,1),(2,5),(4,5)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 8.33
+Average turn around time = 11.78
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,5),(2,5),(2,1),(3,5),(3,2),(5,1),(6,2),(8,2)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 5.00
+Average turn around time = 7.88
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,2),(2,6),(3,5),(3,2),(5,1),(6,1),(6,2),(7,2),(7,3),(6,2),(7,5),(4,3),(5,6),(10,1)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 10.36
+Average turn around time = 13.29
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+<!-- question: 23  -->
+  <question type="coderunner">
+    <name>
+      <text>Programing for SJF CPU Scheduling (preemptive)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p dir="ltr" style="text-align: left;"></p><p dir="ltr">Viết function findavgTime để xuất ra thời gian đợi trung bình và thời gian xoay vòng trung bình của giải thuật SJF CPU Scheduling&nbsp;(Preemptive) theo template như sau:</p><pre>def findavgTime(processes): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of SJF Algorithm (Preemptive)
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) 
+</pre><p dir="ltr">Hàm findavgTime được truyền vào là một list của các tuple 2 phần tử, phần tử thứ nhất sẽ là arrival time của process, phần tử thứ hai sẽ là brust time của process.</p><p dir="ltr">Để đúng với kết quả, in đúng theo kết quả testcase dưới đây, lấy 2 chữ số 0 sau chữ số thập phân (như code mẫu đã sinh ra).</p><p dir="ltr"><br></p><br><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>python3</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <showsource>0</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload><![CDATA[def findavgTime(processes): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of SJF Algorithm (Preemptive)
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) ]]></answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[
+class Process:
+    def __init__(self, arrivalTime, brustTime) -> None:
+        self.arrivalTime = arrivalTime
+        self.brustTime = brustTime
+        self.remainingTime = brustTime
+        self.waitingTime = 0
+        self.turnAroundTime = 0
+        self.completeTime = -1
+def findavgTime(processes): 
+    #TODO: write function to calculate avgWaitingTime and avgTurnAroundTime of SJF Algorithm (Non-preemptive)
+    n = len(processes)
+    lstProcess = []
+    # Tạo các process 
+    for process in processes:
+        lstProcess.append(Process(process[0], process[1]))
+
+    # set các thông số cần thiết
+    countProcessComplete = 0
+    runTime = 0
+    #Chạy đến khi nào tất cả các process đều đã hoàn thành
+    #Lặp qua từng thời điểm
+    while(countProcessComplete < n):
+        index = -1
+        shortestJob = 99999
+        #Tìm process chưa được thực hiện và có remaining time nhỏ nhất 
+        for i in range(n):
+            if lstProcess[i].arrivalTime <= runTime and lstProcess[i].completeTime == -1:
+                if lstProcess[i].remainingTime < shortestJob:
+                    #tìm được process thõa mãn
+                    shortestJob = lstProcess[i].remainingTime
+                    index = i
+
+        runTime += 1
+        #nếu không tìm được process thõa mãn thì skip 
+        if index == -1:
+            continue
+        #Cập nhật các thông số cho process thõa mãn 
+        lstProcess[index].remainingTime -= 1
+        if lstProcess[index].remainingTime == 0: #process hoàn thành
+            lstProcess[index].completeTime = runTime
+            lstProcess[index].turnAroundTime = runTime - lstProcess[index].arrivalTime
+            lstProcess[index].waitingTime = lstProcess[index].turnAroundTime - lstProcess[index].brustTime
+            countProcessComplete +=1
+    
+    avgWaitingTime = sum([process.waitingTime for process in lstProcess])/n
+    avgTurnAroundTime = sum([process.turnAroundTime for process in lstProcess])/n
+
+    #! DO NOT CHANGE
+    print("Average waiting time = "+ "{:.2f}".format(avgWaitingTime)) 
+    print("Average turn around time = "+ "{:.2f}".format(avgTurnAroundTime)) 
+]]></answer>
+    <validateonsave>1</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <testcases>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(1,6),(1,8),(2,7),(3,3)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 6.75
+Average turn around time = 12.75
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(2,3),(0,4),(4,2),(5,4)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 2.00
+Average turn around time = 5.25
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(3,3),(0,4),(4,2),(5,4),(1,2),(4,5),(2,1),(2,5),(4,5)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 8.00
+Average turn around time = 11.44
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,5),(2,5),(2,1),(3,5),(3,2),(5,1),(6,2),(8,2)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 4.25
+Average turn around time = 7.12
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findavgTime([(0,2),(2,6),(3,5),(3,2),(5,1),(6,1),(6,2),(7,2),(7,3),(6,2),(7,5),(4,3),(5,6),(10,1)])</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>Average waiting time = 8.71
+Average turn around time = 11.64
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+<!-- question: 29  -->
+  <question type="coderunner">
+    <name>
+      <text>Second Change (Clock) page replacement</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p dir="ltr" style="text-align: left;"><p dir="ltr">Viết function findNumOfPageReplacement để in ra màn hình số lần thay trang, với giá trị truyền vào là dãy những trang tham chiếu và số frames với giải thuật Second change (Clock)</p><pre><div><div>def&nbsp;findNumOfPageReplacement(pageReference,&nbsp;numOfFrames):</div></div>    pass</pre><p dir="ltr">Để đúng với kết quả, in đúng theo kết quả testcase dưới đây, chỉ in đúng số trang được thay thế.</p><p dir="ltr"><br></p><br><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>python3</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <showsource>0</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload>def findNumOfPageReplacement(pageReference, numOfFrames):
+    pass</answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer>def findNumOfPageReplacement(pageReference, numOfFrames):
+    frames = [-1]*numOfFrames
+    secondChange = [False]*numOfFrames
+    currentIndex = 0
+    numOfPageReplacement = 0
+    for i in range(len(pageReference)):
+        if pageReference[i] in frames:
+            secondChange[frames.index(pageReference[i])] = True
+        elif pageReference[i] not in frames:
+            for j in range(currentIndex, currentIndex+numOfFrames*2):
+                if secondChange[j%numOfFrames] == True:
+                    secondChange[j%numOfFrames] = False
+                    continue
+                else:
+                    frames[j%numOfFrames] = pageReference[i]
+                    currentIndex = j%numOfFrames + 1
+                    break
+            numOfPageReplacement += 1
+    print(numOfPageReplacement)</answer>
+    <validateonsave>1</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <testcases>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([7,0,1,2,0,3,0,4,2,3,0,3,0,3,2,1,2,0,1,7,0,1],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>11
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>13
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="1" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1],4)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>11
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,1,2,1,2,2,6,9,1,2,2,6,9,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1],3)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>19
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>findNumOfPageReplacement([2,5,10,1,2,1,2,1,2,2,9,1,1,3,3,5,6,7,1,2,5,4,6,2,1,12,3,5,4,6,9,4,2,4,5,9,5,7,8,9,8,7,2,1,3,2,4,5,6,5,4,2,5,6,8,2,2,2,6,9,1,1,2,1,2,2,9,1,2,2,6,9,1,2,10,2,6,1,2,2,6,6,9,1,2,2,6,9,1,2,10,2,6,1,2,6,9,1,2,2,6,9,1,2,10,1,5,1,2,3,5,4,5,6,8,5,2,4,5,9,8,4,1,5,2,2,9,1,2,2,6,2,4,6,1,2,3,12,3,11,2,4,2,5,6,9,1,1,2,1,2,2,9,1,2,2,6,9,1,2,10,2,6,1,2,2,6,6,9,1,2,2,6,9,1,2,10,2,6,1,2,6,9,1,2,2,6,9,1,2,10,2,6,1,2,1,6,9,5,1,2,6,1,2,1,6,9,5,1],5)</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>58
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>HIDE</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+<!-- question: 20  -->
+  <question type="coderunner">
+    <name>
+      <text>square for python</text>
+    </name>
+    <questiontext format="html">
+      <text>square</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>python3</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>10, 20, ...</penaltyregime>
+    <precheck>0</precheck>
+    <showsource>0</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload></answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer></answer>
+    <validateonsave>1</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <testcases>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>print(sqr(-5))</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>25</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>print(sqr(7))</text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>49</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
+</quiz>
